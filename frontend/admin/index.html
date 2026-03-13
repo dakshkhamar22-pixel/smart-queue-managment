@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Smart Queue Management</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header>
+    <h1>🎫 Admin Dashboard</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/admin" class="active">Admin</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Queue Overview -->
+    <section class="card">
+      <h2>Queue Overview</h2>
+      <div class="status-grid">
+        <div class="status-item">
+          <span class="label">Now Serving</span>
+          <span id="admin-serving" class="value serving">--</span>
+        </div>
+        <div class="status-item">
+          <span class="label">Waiting</span>
+          <span id="admin-waiting" class="value">0</span>
+        </div>
+        <div class="status-item">
+          <span class="label">Completed</span>
+          <span id="admin-completed" class="value">0</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Admin Actions -->
+    <section class="card">
+      <h2>Actions</h2>
+      <div class="admin-actions">
+        <button id="call-next-btn" class="btn btn-success">📢 Call Next</button>
+        <button id="reset-queue-btn" class="btn btn-danger">🔄 Reset Queue</button>
+      </div>
+      <div id="admin-message" class="hidden notification"></div>
+    </section>
+
+    <!-- Token List -->
+    <section class="card">
+      <h2>All Tokens</h2>
+      <div style="overflow-x: auto;">
+        <table class="token-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Phone</th>
+              <th>Status</th>
+              <th>Created</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="token-list"></tbody>
+        </table>
+      </div>
+      <p id="no-tokens" class="hidden" style="text-align:center; color: var(--text-light); padding: 2rem;">No tokens yet</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Smart Queue Management System - Admin</p>
+  </footer>
+
+  <script src="../js/admin.js"></script>
+</body>
+</html>
