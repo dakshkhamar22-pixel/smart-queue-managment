@@ -1,0 +1,28 @@
+{
+  "name": "smart-queue-management",
+  "version": "1.0.0",
+  "description": "A smart queue management system with online token booking, live queue status, and admin dashboard",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "node backend/server.js",
+    "test": "jest --detectOpenHandles --forceExit"
+  },
+  "keywords": [
+    "queue",
+    "management",
+    "token",
+    "booking"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.21.2",
+    "mongoose": "^7.8.4"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3"
+  }
+}
